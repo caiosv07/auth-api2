@@ -1,0 +1,1 @@
+web: gunicorn auth1.wsgi:app
