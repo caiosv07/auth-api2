@@ -1,1 +1,1 @@
-web: gunicorn auth1.wsgi:app
+web: gunicorn auth1.wsgi --log-file -
