@@ -56,6 +56,6 @@ class LoginView(APIView):
     @swagger_auto_schema(operation_summary="Get request info",
                          operation_description="Mostra as informações da request do usuário")
     def get(self, request: Request):
-        content = {"user": str(request.user), "auth": str(request.auth), "user.id":int(request.user.id)}
+        content = {"user": str(request.user), "auth": str(request.auth), "user.id":str(request.user.id)}
 
         return Response(data=content, status=status.HTTP_200_OK)
