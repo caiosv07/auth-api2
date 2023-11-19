@@ -5,7 +5,7 @@ from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import User
-from .serializers import SignUpSerializer
+from .serializers import SignUpSerializer, Userserializer
 from .tokens import create_jwt_pair_for_user
 from drf_yasg.utils import swagger_auto_schema
 
@@ -62,6 +62,7 @@ class LoginView(APIView):
     
 
 class UserView(APIView):    
+   serializer_class = Userserializer
    def get(self, request):
        query = User.objects.all()
        content = {"query": query}
