@@ -4,7 +4,7 @@ from rest_framework import generics, status
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
+from .models import User
 from .serializers import SignUpSerializer
 from .tokens import create_jwt_pair_for_user
 from drf_yasg.utils import swagger_auto_schema
@@ -59,3 +59,10 @@ class LoginView(APIView):
         content = {"user": str(request.user), "auth": str(request.auth), "user.id":str(request.user.id)}
 
         return Response(data=content, status=status.HTTP_200_OK)
+    
+
+class UserView(APIView):    
+   def get(self, request):
+       query = User.objects.all()
+       content = {"query": query}
+       return Response(data=content, status=status.HTTP_200_OK)
