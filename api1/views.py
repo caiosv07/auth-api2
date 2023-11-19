@@ -64,7 +64,6 @@ class LoginView(APIView):
 class UserView(APIView):    
    serializer_class = Userserializer
    def get(self, request):
-       query = User.objects.all()
-       serializer = self.serializer_class(data=query)
-       response = {"message": "User  Successfully", "data": serializer.data}
-       return Response(data=serializer.data, status=status.HTTP_200_OK)
+        query = User.objects.all()
+        content = {"query": str(query)}
+        return Response(data=content , status=status.HTTP_200_OK)
