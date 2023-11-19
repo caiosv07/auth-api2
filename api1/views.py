@@ -67,4 +67,4 @@ class UserView(APIView):
        query = User.objects.all()
        serializer = self.serializer_class(data=query)
        response = {"message": "User  Successfully", "data": serializer.data}
-       return Response(data=response, status=status.HTTP_200_OK)
+       return Response(data=serializer.data, status=status.HTTP_200_OK)
