@@ -155,4 +155,3 @@ SWAGGER_SETTINGS = {
    'USE_SESSION_AUTH': False
 }
 
-STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
