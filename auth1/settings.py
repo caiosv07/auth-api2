@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
+    'whitenoise.runserver_nostatic', 
+    'whitenoise',
     
 ]
 
@@ -153,3 +155,4 @@ SWAGGER_SETTINGS = {
    'USE_SESSION_AUTH': False
 }
 
+STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
