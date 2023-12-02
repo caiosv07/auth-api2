@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+import os
 from datetime import timedelta
 from pathlib import Path
 
@@ -155,5 +156,6 @@ SWAGGER_SETTINGS = {
    'USE_SESSION_AUTH': False
 }
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 STATIC_URL = '/static/'
 STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
