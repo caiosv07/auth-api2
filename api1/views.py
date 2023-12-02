@@ -68,3 +68,5 @@ class UserView(APIView):
         query1 = query.user.id
         content = {"query": str(query), "query1": str(query1) }
         return Response(data=content , status=status.HTTP_200_OK)
+
+
