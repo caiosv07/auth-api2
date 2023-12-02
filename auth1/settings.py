@@ -155,3 +155,5 @@ SWAGGER_SETTINGS = {
    'USE_SESSION_AUTH': False
 }
 
+STATIC_URL = '/static/'
+STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
