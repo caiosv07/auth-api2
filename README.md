@@ -18,7 +18,7 @@ JWT (JSON Web Tokens)
 ```
 
 ```bash
-  cd Django-Movie
+  cd auth-api2
 ```
 
 ```bash
